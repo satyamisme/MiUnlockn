@@ -63,7 +63,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun clearWebView() {
         ApplicationLoader.prefs.edit()
-            .putString("user", "")
+            .putString("user", "empty")
             .apply()
 
         cookieManager.removeSessionCookies(null)

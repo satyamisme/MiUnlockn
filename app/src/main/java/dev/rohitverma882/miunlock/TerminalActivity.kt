@@ -73,7 +73,7 @@ class TerminalActivity : AppCompatActivity(), TerminalViewClient, TerminalSessio
                 .apply()
         } catch (e: Throwable) {
             ApplicationLoader.prefs.edit()
-                .putString("user", "")
+                .putString("user", "empty")
                 .apply()
 
             Toast.makeText(
