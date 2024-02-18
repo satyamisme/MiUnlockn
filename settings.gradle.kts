@@ -17,4 +17,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "MiUnlock"
-include(":app")
+include(":app", ":terminal")
