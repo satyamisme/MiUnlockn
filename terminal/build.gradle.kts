@@ -8,24 +8,12 @@ plugins {
 android {
     namespace = "com.termux.terminal"
     compileSdk = project.properties["compileSdk"].toString().toInt()
-    ndkVersion = project.properties["ndkVersion"].toString()
 
     defaultConfig {
         minSdk = project.properties["minSdk"].toString().toInt()
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
-
-        externalNativeBuild {
-            cmake {
-                arguments("-DANDROID_STL=none")
-            }
-        }
-        ndk {
-            abiFilters += setOf(
-                "arm64-v8a", "armeabi-v7a", "x86_64", "x86"
-            )
-        }
     }
 
     buildTypes {
@@ -44,13 +32,6 @@ android {
 
     kotlinOptions {
         jvmTarget = "11"
-    }
-
-    externalNativeBuild {
-        cmake {
-            path = file("src/main/cpp/CMakeLists.txt")
-            version = project.properties["cmakeVersion"].toString()
-        }
     }
 }
 

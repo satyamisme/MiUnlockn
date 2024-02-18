@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name" translatable="false">MiUnlock</string>
 
-    <string name="action_share_transcript">Share transcript</string>
     <string name="action_logout">Logout</string>
+
+    <string name="msg_user_data_save_error">Failed to save user data: %s</string>
 </resources>

@@ -3,6 +3,7 @@
 plugins {
     alias(libs.plugins.application)
     alias(libs.plugins.kotlin)
+    id("kotlin-parcelize")
     alias(libs.plugins.materialthemebuilder)
 }
 
@@ -89,6 +90,7 @@ dependencies {
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.constraintlayout)
+    implementation(libs.webkit)
 
     compileOnly(libs.boringssl)
 
